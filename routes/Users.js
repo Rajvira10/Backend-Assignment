@@ -39,7 +39,7 @@ router.post("/login", async (req, res) => {
   });
 });
 
-router.post("/", validateToken, async (req, res) => {
+router.post("/", async (req, res) => {
   const { username, password, role } = req.body;
   const verified = false;
   const sqlCheck = "SELECT * FROM users where username=?";
